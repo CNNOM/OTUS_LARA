@@ -1,14 +1,14 @@
-<footer class="site-footer">
-    <div>
-        <a class="site-footer__brand" href="/">Nomad Nest</a>
-        <p class="site-footer__copy">Авторские маршруты, спокойный сервис и бронирование в одном пространстве.</p>
-    </div>
-
-    <nav class="site-footer__nav">
-        <a href="/">Главная</a>
-        <a href="/tours">Туры</a>
-        <a href="/auth">Личный кабинет</a>
-    </nav>
-
-    <p class="site-footer__meta">Travel concept for study project</p>
-</footer>
+ <footer class="site-footer">
+     <div class="site-footer__container container">
+         <div>
+             <p class="site-footer__brand">Discover Journey</p>
+             <p class="site-footer__text">Платформа для бронирования туров, вдохновения для путешествий и ярких
+                 маршрутов.</p>
+         </div>
+         <nav class="site-footer__nav" aria-label="Навигация в подвале">
+             <a href="/">Главная</a>
+             <a href="/tours">Туры</a>
+             <a href="/auth">Регистрация</a>
+         </nav>
+     </div>
+ </footer>

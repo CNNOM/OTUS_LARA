@@ -3,174 +3,156 @@
 @section('title', 'Главная')
 
 @section('main')
-    <main class="travel-content">
-        <section class="hero">
-            <div class="hero__content">
-                <p class="hero__eyebrow">Travel booking platform</p>
-                <h1 class="hero__headline">
-                    <span class="hero__headline-back">WANDER</span>
-                    <span class="hero__headline-front">WANDER</span>
-                </h1>
-                <p class="hero__copy">
-                    Бронируйте отели, авторские туры и поездки выходного дня в одном месте.
-                    Страница специально повторяет любимый приём из референса: текст частично
-                    уходит под фотографию и выглядит объёмнее.
-                </p>
-
-                <div class="hero__actions">
-                    <a class="button button--light" href="/tours">Смотреть туры</a>
-                    <a class="button button--ghost" href="/auth">Забронировать</a>
+    <main class="layout__content">
+        <section class="home-hero">
+            <div class="home-hero__frame container">
+                <div class="home-hero__panel">
+                    <div class="home-hero__visual">
+                        <img src="{{ asset('images/hero-discover.png') }}" alt="Green ocean cliffs">
+                        <div class="home-hero__overlay">
+                        </div>
+                        <p class="home-hero__brand">DISCOVER</p>
+                        <div class="home-hero__intro">
+                            <h1>Открой красоту природы совершенно по-новому</h1>
+                            <p>Открывай живописные места, бронируй memorable tours и планируй спокойные путешествия
+                                в одном удобном сервисе.</p>
+                            <div class="home-hero__cta-row">
+                                <a class="home-hero__button" href="/tours">Начать путешествие</a>
+                                <span class="home-hero__note">Листай к рекомендованным направлениям</span>
+                            </div>
+                        </div>
+                        <div class="home-hero__side-card">
+                            <img src="{{ asset('images/tour-alpine.png') }}" alt="Mountain valley path">
+                            <div class="home-hero__side-caption">
+                                <span>Scenic routes</span>
+                                <strong>Путешествуй шире привычных маршрутов</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-hero__search">
+                        <div class="home-hero__search-item">
+                            <span class="home-hero__search-label">Город или адрес</span>
+                            <strong>Выберите направление</strong>
+                        </div>
+                        <div class="home-hero__search-item">
+                            <span class="home-hero__search-label">Даты поездки</span>
+                            <strong>Выберите период</strong>
+                        </div>
+                        <div class="home-hero__search-item">
+                            <span class="home-hero__search-label">Тип ландшафта</span>
+                            <strong>Горы, озёра, побережье</strong>
+                        </div>
+                        <a class="home-hero__search-button" href="/tours" aria-label="Find tours">Туры</a>
+                    </div>
                 </div>
             </div>
-
-            <div class="hero__image-wrap">
-                <img class="hero__image"
-                    src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80"
-                    alt="Спокойное зелёное озеро в горах">
-            </div>
         </section>
 
-        <section class="overview" id="benefits">
-            <div class="overview__intro">
-                <p class="section-label">Почему выбирают нас</p>
-                <h2>Удобный сервис для путешествий по России и за границу</h2>
-                <p>
-                    Для учебного проекта это хорошая тема: здесь можно показать каталог,
-                    фильтры, личный кабинет, бронирование, оплату, статусы заказов и админку.
-                </p>
-
-                <div class="stats">
-                    <article>
-                        <strong>12k</strong>
-                        <span>счастливых туристов</span>
+        <section class="recommended-tours">
+            <div class="recommended-tours__container container">
+                <div class="recommended-tours__heading">
+                    <div>
+                        <p class="recommended-tours__eyebrow">Рекомендованные направления</p>
+                        <h2>Красивые путешествия для тех, кто любит впечатления и комфорт</h2>
+                    </div>
+                    <a class="recommended-tours__link" href="/tours">Смотреть все туры</a>
+                </div>
+                <div class="recommended-tours__grid">
+                    <article class="tour-card">
+                        <div class="tour-card__media">
+                            <img src="{{ asset('images/hero-discover.png') }}" alt="Закатный круиз по Whitsunday Beach" loading="lazy">
+                            <span class="tour-card__badge">Australia</span>
+                        </div>
+                        <div class="tour-card__meta">
+                            <span>Coastal Escape</span>
+                            <span>5 дней</span>
+                        </div>
+                        <h3 class="tour-card__title">Закатный круиз по Whitsunday Beach</h3>
+                        <p class="tour-card__text">Морские панорамы, уединённые бухты и расслабленный маршрут в
+                            премиальном стиле.</p>
+                        <div class="tour-card__footer">
+                            <span class="tour-card__rating">★ 4.9</span>
+                            <span class="tour-card__price">$1,280</span>
+                        </div>
                     </article>
-                    <article>
-                        <strong>85+</strong>
-                        <span>направлений</span>
+                    <article class="tour-card">
+                        <div class="tour-card__media">
+                            <img src="{{ asset('images/tour-alpine.png') }}" alt="Пикник у озера Lucerne Swiss" loading="lazy">
+                            <span class="tour-card__badge">Switzerland</span>
+                        </div>
+                        <div class="tour-card__meta">
+                            <span>Lake Retreat</span>
+                            <span>4 дня</span>
+                        </div>
+                        <h3 class="tour-card__title">Пикник у озера Lucerne Swiss</h3>
+                        <p class="tour-card__text">Горные панорамы, локальная кухня и спокойный ритм путешествия.</p>
+                        <div class="tour-card__footer">
+                            <span class="tour-card__rating">★ 4.8</span>
+                            <span class="tour-card__price">$1,540</span>
+                        </div>
                     </article>
-                    <article>
-                        <strong>24/7</strong>
-                        <span>поддержка</span>
+                    <article class="tour-card">
+                        <div class="tour-card__media">
+                            <img src="{{ asset('images/hero-discover.png') }}" alt="Путешествие к водопаду Angel Falls" loading="lazy">
+                            <span class="tour-card__badge">Venezuela</span>
+                        </div>
+                        <div class="tour-card__meta">
+                            <span>Adventure Trail</span>
+                            <span>7 дней</span>
+                        </div>
+                        <h3 class="tour-card__title">Путешествие к водопаду Angel Falls</h3>
+                        <p class="tour-card__text">Дикая природа, маршруты с гидом и насыщенные остановки в
+                            красивых местах.</p>
+                        <div class="tour-card__footer">
+                            <span class="tour-card__rating">★ 4.7</span>
+                            <span class="tour-card__price">$1,920</span>
+                        </div>
+                    </article>
+                    <article class="tour-card">
+                        <div class="tour-card__media">
+                            <img src="{{ asset('images/tour-alpine.png') }}" alt="Скрытые тропы северной долины" loading="lazy">
+                            <span class="tour-card__badge">Iceland</span>
+                        </div>
+                        <div class="tour-card__meta">
+                            <span>Highland Route</span>
+                            <span>6 дней</span>
+                        </div>
+                        <h3 class="tour-card__title">Скрытые тропы северной долины</h3>
+                        <p class="tour-card__text">Путешествие для тех, кто ищет тишину, чистый воздух и северную
+                            красоту.</p>
+                        <div class="tour-card__footer">
+                            <span class="tour-card__rating">★ 5.0</span>
+                            <span class="tour-card__price">$2,060</span>
+                        </div>
                     </article>
                 </div>
             </div>
-
-            <div class="feature-list">
-                <article class="feature-card">
-                    <h3>Локальная экспертиза</h3>
-                    <p>Подбор туров с понятными маршрутами, датами и рекомендациями по сезону.</p>
-                </article>
-                <article class="feature-card">
-                    <h3>Отели и туры в одном месте</h3>
-                    <p>Можно собрать поездку целиком: проживание, трансфер и экскурсионную программу.</p>
-                </article>
-                <article class="feature-card">
-                    <h3>Управление бронями</h3>
-                    <p>Из личного кабинета легко менять статус заказа, видеть историю и уведомления.</p>
-                </article>
-            </div>
         </section>
 
-        <section class="destinations" id="destinations">
-            <div class="section-heading">
-                <div>
-                    <p class="section-label">Популярные места</p>
-                    <h2>Направления, которые хочется открыть первыми</h2>
+        <section class="adventure-highlight">
+            <div class="adventure-highlight__container container">
+                <div class="adventure-highlight__content">
+                    <p class="adventure-highlight__eyebrow">Сделай путешествия ярче</p>
+                    <h2>Маршруты, в которых сочетаются комфорт, природа и живые впечатления.</h2>
+                    <p class="adventure-highlight__lead">Мы создаём поездки для людей, которым важны продуманные
+                        маршруты, красивые места проживания и свобода наслаждаться дорогой в своём темпе.</p>
+                    <div class="adventure-highlight__features">
+                        <article>
+                            <strong>Дайвинг и снорклинг</strong>
+                            <p>Гибкие водные активности, помощь с экипировкой и тщательно выбранные локации у воды.</p>
+                        </article>
+                        <article>
+                            <strong>Профессиональный гид</strong>
+                            <p>Опытные локальные проводники, которые делают каждый маршрут проще и интереснее.</p>
+                        </article>
+                    </div>
                 </div>
-                <a class="button button--dark" href="#packages">Все предложения</a>
-            </div>
-
-            <div class="destination-grid">
-                <article class="destination-card destination-card--tall">
-                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80"
-                        alt="Горы">
-                    <div class="destination-card__overlay">
-                        <span>от 48 000 ₽</span>
-                        <h3>Алтай</h3>
-                        <p>Трекинг, озёра и панорамные маршруты</p>
-                    </div>
-                </article>
-
-                <article class="destination-card">
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80"
-                        alt="Пляж">
-                    <div class="destination-card__overlay">
-                        <span>от 62 000 ₽</span>
-                        <h3>Бали</h3>
-                        <p>Пляжи, виллы и slow travel</p>
-                    </div>
-                </article>
-
-                <article class="destination-card">
-                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80"
-                        alt="Долина">
-                    <div class="destination-card__overlay">
-                        <span>от 39 000 ₽</span>
-                        <h3>Грузия</h3>
-                        <p>Горы, вино и городские уикенды</p>
-                    </div>
-                </article>
-
-                <article class="destination-card destination-card--wide">
-                    <img src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?auto=format&fit=crop&w=1200&q=80"
-                        alt="Город у воды">
-                    <div class="destination-card__overlay">
-                        <span>от 55 000 ₽</span>
-                        <h3>Стамбул</h3>
-                        <p>Бутик-отели, гастрономия и насыщенная экскурсионная программа</p>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section class="packages" id="packages">
-            <article class="packages__lead">
-                <p class="section-label">Турпакеты</p>
-                <h2>Соберите путешествие под свой ритм</h2>
-                <p>
-                    Вы можете оставить эту секцию как демо для каталога туров, а дальше уже
-                    подключить данные из базы и сделать фильтрацию по цене, датам и стране.
-                </p>
-                <a class="button button--dark" href="#booking">Открыть каталог</a>
-            </article>
-
-            <article class="package-card package-card--forest">
-                <p class="package-card__kicker">Adventure</p>
-                <h3>Горные выходные</h3>
-                <p>Хайкинг, спа-отель и готовый трансфер из аэропорта.</p>
-            </article>
-
-            <article class="package-card package-card--mist">
-                <p class="package-card__kicker">Relax</p>
-                <h3>Море и бутик-отель</h3>
-                <p>Формат для спокойного отдыха с красивой первой линией.</p>
-            </article>
-        </section>
-
-        <section class="booking" id="booking">
-            <div>
-                <p class="section-label">Как это работает</p>
-                <h2>Бронирование за три простых шага</h2>
-            </div>
-
-            <div class="booking-steps">
-                <article>
-                    <strong>01</strong>
-                    <h3>Выберите направление</h3>
-                    <p>Страна, город, даты и тип отдыха.</p>
-                </article>
-                <article>
-                    <strong>02</strong>
-                    <h3>Настройте поездку</h3>
-                    <p>Добавьте отель, экскурсии и трансфер.</p>
-                </article>
-                <article>
-                    <strong>03</strong>
-                    <h3>Подтвердите бронь</h3>
-                    <p>Оплата, письмо-подтверждение и статус заказа.</p>
-                </article>
+                <div class="adventure-highlight__visual">
+                    <img src="{{ asset('images/tour-alpine.png') }}" alt="Panoramic green valley">
+                    <span class="adventure-highlight__chip">Australia</span>
+                    <span class="adventure-highlight__chip adventure-highlight__chip--muted">Beach</span>
+                </div>
             </div>
         </section>
     </main>
 @endsection
-

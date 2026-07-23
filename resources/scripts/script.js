@@ -1,0 +1,1 @@
+document.documentElement.classList.add(`is-ready`),document.querySelector(`[data-app-root]`)||document.body.setAttribute(`data-app-root`,`true`),console.info(`[app] client scripts initialized`);

@@ -1,0 +1,68 @@
+[
+  {
+    "title": "Закатный круиз по Whitsunday Beach",
+    "description": "Морские панорамы, уединённые бухты и расслабленный маршрут в премиальном стиле.",
+    "country": "Australia",
+    "category": "Coastal Escape",
+    "duration_days": 5,
+    "price": "1280",
+    "rating": "4.9",
+    "image": "tours/hero-discover.png",
+    "is_active": true
+  },
+  {
+    "title": "Пикник у озера Lucerne Swiss",
+    "description": "Горные панорамы, локальная кухня и спокойный ритм путешествия.",
+    "country": "Switzerland",
+    "category": "Lake Retreat",
+    "duration_days": 4,
+    "price": "1540",
+    "rating": "4.8",
+    "image": "tours/tour-alpine.png",
+    "is_active": true
+  },
+  {
+    "title": "Путешествие к водопаду Angel Falls",
+    "description": "Дикая природа, маршруты с гидом и насыщенные остановки в красивых местах.",
+    "country": "Venezuela",
+    "category": "Adventure Trail",
+    "duration_days": 7,
+    "price": "1920",
+    "rating": "4.7",
+    "image": "tours/hero-discover.png",
+    "is_active": true
+  },
+  {
+    "title": "Скрытые тропы северной долины",
+    "description": "Путешествие для тех, кто ищет тишину, чистый воздух и северную красоту.",
+    "country": "Iceland",
+    "category": "Highland Route",
+    "duration_days": 6,
+    "price": "2060",
+    "rating": "5.0",
+    "image": "tours/tour-alpine.png",
+    "is_active": true
+  },
+  {
+    "title": "Лесные лоджи и термальные источники",
+    "description": "Медленные утра, панорамные террасы и восстановление на природе.",
+    "country": "Norway",
+    "category": "Wellness Journey",
+    "duration_days": 3,
+    "price": "980",
+    "rating": "4.8",
+    "image": "tours/register-retreat.png",
+    "is_active": true
+  },
+  {
+    "title": "Glamping-уикенд у альпийского озера",
+    "description": "Стильный отдых на природе для пар, друзей и тех, кто едет впервые.",
+    "country": "Austria",
+    "category": "Cabin Stay",
+    "duration_days": 2,
+    "price": "860",
+    "rating": "4.9",
+    "image": "tours/register-retreat.png",
+    "is_active": true
+  }
+]

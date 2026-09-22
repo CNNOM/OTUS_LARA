@@ -8,7 +8,7 @@
          <nav class="site-footer__nav" aria-label="Навигация в подвале">
              <a href="/">Главная</a>
              <a href="/tours">Туры</a>
-             <a href="/auth">Регистрация</a>
+             <a href="/auth">Бронь</a>
          </nav>
      </div>
  </footer>

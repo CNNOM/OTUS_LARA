@@ -10,7 +10,7 @@
             <a href="/tours"
                 class="site-header__link{{ request()->is('tours') ? ' site-header__link--active' : '' }}">Туры</a>
             <a href="/auth"
-                class="site-header__link{{ request()->is('auth') ? ' site-header__link--active' : '' }}">Регистрация</a>
+                class="site-header__link{{ request()->is('auth') ? ' site-header__link--active' : '' }}">Бронь</a>
         </nav>
         <div class="site-header__actions">
             <details class="site-header__lang-switcher">

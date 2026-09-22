@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TourController;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -12,9 +13,7 @@ Route::get('/', function () {
 Route::get('/auth', function () {
     return view('pages.auth');
 });
-Route::get('tours', function () {
-    return view('pages.tours');
-});
+Route::get('/tours', [TourController::class, 'index'])->name('tours.index');
 
 Route::get('/Hello/', function () {
     return 'Hello World!';
@@ -28,4 +27,3 @@ Route::view(
         'test' => request('test', '<br>dadas'),
     ]
 );
-

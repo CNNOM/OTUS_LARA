@@ -7,8 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 class Tour extends Model
 {
     protected $fillable = [
-        'title', 'description', 'country', 'category', 'duration_days',
-        'price', 'image', 'rating', 'is_active',
+        'title',
+        'description',
+        'country',
+        'category',
+        'duration_days',
+        'price',
+        'image',
+        'rating',
+        'is_active',
     ];
 
     protected function casts(): array

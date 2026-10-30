@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('pages.auth');
 // })->name('login');
 Route::get('/tours', [TourController::class, 'index'])->name('tours.index');
+Route::view('/faq', 'pages.faq')->name('faq');
 
 // Route::get('/Hello/', function () {
 //     return 'Hello World!';

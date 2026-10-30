@@ -2,15 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Support\ContactInformation;
 
 class AboutController
 {
-    public function index()
+    public function index(ContactInformation $contacts)
     {
-        return view('pages.about', [
-            'phone' => config('contacts.phone'),
-            'email' => config('contacts.email'),
-            'address' => config('contacts.address'),
-        ]);
+        return view('pages.about', $contacts->forAboutPage());
     }
 }

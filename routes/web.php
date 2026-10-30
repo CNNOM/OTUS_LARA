@@ -147,5 +147,6 @@ Route::get('/tours', [TourController::class, 'index'])->name('tours.index');
 Route::get('/products', [ProductController::class, 'index']);
 Route::get('/about', [AboutController::class, 'index']);
 Route::get('/contact', [ContactController::class, 'show']);
+Route::view('/faq', 'pages.faq');
 
 Route::get('/users/{id}/', [ProductController::class, 'show'])->whereNumber('id');

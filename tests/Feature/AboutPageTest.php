@@ -16,10 +16,19 @@ class AboutPageTest extends TestCase
 
         $this->get('/about')
             ->assertOk()
-            ->assertSee('tel:+1 555 010 0200', false)
+            ->assertSee('tel:+15550100200', false)
             ->assertSee('+1 555 010 0200')
             ->assertSee('mailto:hello@example.test', false)
             ->assertSee('hello@example.test')
             ->assertSee('10 Example Street');
+    }
+
+    public function test_phone_link_is_normalized_without_changing_displayed_number(): void
+    {
+        config(['contacts.phone' => '+1 (555) 010-0200']);
+
+        $this->get('/about')
+            ->assertOk()
+            ->assertSee('<a href="tel:+15550100200">+1 (555) 010-0200</a>', false);
     }
 }

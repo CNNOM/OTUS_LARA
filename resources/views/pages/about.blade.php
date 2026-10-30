@@ -2,7 +2,7 @@
     <h1>Контакты</h1>
     <dl>
         <dt>Телефон</dt>
-        <dd><a href="tel:{{ $phone }}">{{ $phone }}</a></dd>
+        <dd><a href="tel:{{ $phoneHref }}">{{ $phone }}</a></dd>
 
         <dt>Email</dt>
         <dd><a href="mailto:{{ $email }}">{{ $email }}</a></dd>

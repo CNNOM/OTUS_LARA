@@ -51,6 +51,58 @@ class TourCatalogTest extends TestCase
         $this->get('/admin/tours')->assertRedirect('/admin/login');
     }
 
+    public function test_each_published_card_opens_its_own_details(): void
+    {
+        $first = Tour::create($this->tourData([
+            'title' => 'Озёрный тур', 'details' => 'Прогулка по берегу', 'program' => 'День у воды',
+            'itinerary' => [['title' => 'Берег озера', 'description' => 'Прогулка у воды']],
+            'hotels' => [['id' => 'lake', 'name' => 'Озёрный отель', 'description' => 'У берега', 'amenities' => 'Wi-Fi', 'image' => 'images/tour-alpine.png', 'extra_per_day' => 0]],
+        ]));
+        $second = Tour::create($this->tourData([
+            'title' => 'Горный тур', 'details' => 'Подъём на вершину', 'program' => 'День в горах', 'price' => 400, 'duration_days' => 5,
+            'itinerary' => [['title' => 'Тропа', 'description' => 'Подъём в горы']],
+            'hotels' => [
+                ['id' => 'mountain', 'name' => 'Горный дом', 'description' => 'У тропы', 'amenities' => 'Wi-Fi', 'image' => 'images/tour-alpine.png', 'extra_per_day' => 0],
+                ['id' => 'comfort', 'name' => 'Горный комфорт', 'description' => 'Вид на горы', 'amenities' => 'Завтрак', 'image' => 'images/tour-alpine.png', 'extra_per_day' => 35],
+            ],
+        ]));
+        $hidden = Tour::create($this->tourData(['title' => 'Скрытый тур', 'is_active' => false]));
+
+        foreach (['/', '/tours'] as $url) {
+            $this->get($url)->assertOk()
+                ->assertSee(route('tours.show', $first), false)
+                ->assertSee(route('tours.show', $second), false)
+                ->assertDontSee('Скрытый тур');
+        }
+
+        $this->get(route('tours.show', $first))->assertOk()
+            ->assertSee('Прогулка по берегу')->assertSee('Берег озера')->assertSee('Прогулка у воды')
+            ->assertSee('class="tour-detail__days"', false)->assertSee('Этап 1')
+            ->assertSee('Настройте поездку')->assertSee('Выберите отель')
+            ->assertSee('name="hotel" value="lake"', false)->assertSee('Озёрный отель')
+            ->assertDontSee('Горный комфорт')
+            ->assertSee('data-hotel-prev', false)->assertSee('data-hotel-next', false)
+            ->assertSee('name="adults"', false)->assertSee('name="start"', false)
+            ->assertDontSee('Подъём на вершину');
+        $this->get(route('tours.show', $second))->assertOk()
+            ->assertSee('Подъём на вершину')->assertSee('Подъём в горы')
+            ->assertSee('Горный комфорт')->assertDontSee('Озёрный отель')
+            ->assertSee('Настройте поездку')->assertSee('value="'.$second->id.'"', false)
+            ->assertSee('data-base-price="400.00"', false)->assertSee('data-duration="5"', false)
+            ->assertDontSee('Прогулка по берегу');
+        $this->get('/cart?'.http_build_query([
+            'tour' => $second->id, 'adults' => 2, 'under5' => 1,
+            'children' => 0, 'hotel' => 'comfort', 'start' => '2027-06-01',
+        ]))->assertOk()->assertSee('Горный тур')->assertDontSee('Озёрный тур')
+            ->assertSee('$1,425.00')->assertSee('Горный комфорт')
+            ->assertSee('type="button" disabled>Подтвердить заказ', false);
+        $this->get('/cart?tour='.$second->id.'&hotel=lake')->assertSessionHasErrors('hotel');
+        $this->get('/cart?tour='.$hidden->id)->assertNotFound();
+        $this->get('/cart?tour='.$second->id.'&hotel=invalid')->assertSessionHasErrors('hotel');
+        $this->get(route('tours.show', $hidden))->assertNotFound();
+        $this->get('/tours/999999')->assertNotFound();
+    }
+
     public function test_admin_can_create_edit_unpublish_and_delete_tour(): void
     {
         $this->loginToPanel();
@@ -91,10 +143,19 @@ class TourCatalogTest extends TestCase
         Storage::fake('public');
         $this->seed(TourSeeder::class);
         $tour = Tour::firstOrFail();
-        $tour->update(['price' => 42]);
+        $customHotels = [['id' => 'custom', 'name' => 'Авторский отель', 'extra_per_day' => 0]];
+        $tour->update(['price' => 42, 'program' => 'Авторская программа', 'hotels' => $customHotels]);
         $this->seed(TourSeeder::class);
         $this->assertDatabaseCount('tours', 6);
         $this->assertEquals('42.00', $tour->fresh()->price);
+        $this->assertNotEmpty($tour->fresh()->details);
+        $this->assertSame($customHotels, $tour->fresh()->hotels);
+        $this->assertCount(5, $tour->fresh()->itinerary);
+        $this->assertSame('Авторская программа', $tour->fresh()->program);
         Storage::disk('public')->assertExists($tour->image);
+        $this->assertNotSame(
+            Tour::where('country', 'Switzerland')->firstOrFail()->hotels[0]['name'],
+            Tour::where('country', 'Norway')->firstOrFail()->hotels[0]['name'],
+        );
     }
 }

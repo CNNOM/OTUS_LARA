@@ -58,73 +58,9 @@
                     <a class="recommended-tours__link" href="/tours">Смотреть все туры</a>
                 </div>
                 <div class="recommended-tours__grid">
-                    <article class="tour-card">
-                        <div class="tour-card__media">
-                            <img src="{{ asset('images/hero-discover.png') }}" alt="Закатный круиз по Whitsunday Beach" loading="lazy">
-                            <span class="tour-card__badge">Australia</span>
-                        </div>
-                        <div class="tour-card__meta">
-                            <span>Coastal Escape</span>
-                            <span>5 дней</span>
-                        </div>
-                        <h3 class="tour-card__title">Закатный круиз по Whitsunday Beach</h3>
-                        <p class="tour-card__text">Морские панорамы, уединённые бухты и расслабленный маршрут в
-                            премиальном стиле.</p>
-                        <div class="tour-card__footer">
-                            <span class="tour-card__rating">★ 4.9</span>
-                            <span class="tour-card__price">$1,280</span>
-                        </div>
-                    </article>
-                    <article class="tour-card">
-                        <div class="tour-card__media">
-                            <img src="{{ asset('images/tour-alpine.png') }}" alt="Пикник у озера Lucerne Swiss" loading="lazy">
-                            <span class="tour-card__badge">Switzerland</span>
-                        </div>
-                        <div class="tour-card__meta">
-                            <span>Lake Retreat</span>
-                            <span>4 дня</span>
-                        </div>
-                        <h3 class="tour-card__title">Пикник у озера Lucerne Swiss</h3>
-                        <p class="tour-card__text">Горные панорамы, локальная кухня и спокойный ритм путешествия.</p>
-                        <div class="tour-card__footer">
-                            <span class="tour-card__rating">★ 4.8</span>
-                            <span class="tour-card__price">$1,540</span>
-                        </div>
-                    </article>
-                    <article class="tour-card">
-                        <div class="tour-card__media">
-                            <img src="{{ asset('images/hero-discover.png') }}" alt="Путешествие к водопаду Angel Falls" loading="lazy">
-                            <span class="tour-card__badge">Venezuela</span>
-                        </div>
-                        <div class="tour-card__meta">
-                            <span>Adventure Trail</span>
-                            <span>7 дней</span>
-                        </div>
-                        <h3 class="tour-card__title">Путешествие к водопаду Angel Falls</h3>
-                        <p class="tour-card__text">Дикая природа, маршруты с гидом и насыщенные остановки в
-                            красивых местах.</p>
-                        <div class="tour-card__footer">
-                            <span class="tour-card__rating">★ 4.7</span>
-                            <span class="tour-card__price">$1,920</span>
-                        </div>
-                    </article>
-                    <article class="tour-card">
-                        <div class="tour-card__media">
-                            <img src="{{ asset('images/tour-alpine.png') }}" alt="Скрытые тропы северной долины" loading="lazy">
-                            <span class="tour-card__badge">Iceland</span>
-                        </div>
-                        <div class="tour-card__meta">
-                            <span>Highland Route</span>
-                            <span>6 дней</span>
-                        </div>
-                        <h3 class="tour-card__title">Скрытые тропы северной долины</h3>
-                        <p class="tour-card__text">Путешествие для тех, кто ищет тишину, чистый воздух и северную
-                            красоту.</p>
-                        <div class="tour-card__footer">
-                            <span class="tour-card__rating">★ 5.0</span>
-                            <span class="tour-card__price">$2,060</span>
-                        </div>
-                    </article>
+                    @foreach ($tours as $tour)
+                        @include('pages.tour-card', ['tour' => $tour])
+                    @endforeach
                 </div>
             </div>
         </section>

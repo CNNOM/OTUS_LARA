@@ -9,6 +9,10 @@ class Tour extends Model
     protected $fillable = [
         'title',
         'description',
+        'details',
+        'program',
+        'hotels',
+        'itinerary',
         'country',
         'category',
         'duration_days',
@@ -20,6 +24,6 @@ class Tour extends Model
 
     protected function casts(): array
     {
-        return ['is_active' => 'boolean', 'duration_days' => 'integer', 'price' => 'decimal:2', 'rating' => 'decimal:1'];
+        return ['is_active' => 'boolean', 'duration_days' => 'integer', 'price' => 'decimal:2', 'rating' => 'decimal:1', 'hotels' => 'array', 'itinerary' => 'array'];
     }
 }

@@ -9,6 +9,9 @@
              <a href="/">Главная</a>
              <a href="/tours">Туры</a>
              <a href="/registration">Регистрация</a>
+             <a href="/about">О нас</a>
+             <a href="/contacts">Контакты</a>
+             <a href="/faq">Вопросы и ответы</a>
          </nav>
      </div>
  </footer>

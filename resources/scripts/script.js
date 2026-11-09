@@ -21,3 +21,7 @@ if (checkout) {
     checkout.querySelectorAll('input[name="customer-type"]').forEach((radio) => radio.addEventListener('change', toggle));
     toggle();
 }
+
+const gallery = document.querySelector('[data-tour-gallery]');
+document.querySelector('[data-gallery-prev]')?.addEventListener('click', () => gallery.scrollBy({ left: -gallery.clientWidth, behavior: 'smooth' }));
+document.querySelector('[data-gallery-next]')?.addEventListener('click', () => gallery.scrollBy({ left: gallery.clientWidth, behavior: 'smooth' }));

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Иллюстрация карты Москвы с тремя офисами</title>
+  <desc id="desc">Условные точки на Арбате, Тверской и Пятницкой. Не является точной картой.</desc>
+  <rect width="1200" height="560" fill="#f6f2ec"/>
+  <g fill="#e7eae2" opacity=".8">
+    <rect x="60" y="55" width="150" height="90" rx="22" transform="rotate(-10 60 55)"/>
+    <rect x="245" y="65" width="136" height="75" rx="16" transform="rotate(8 245 65)"/>
+    <rect x="760" y="62" width="180" height="98" rx="24"/>
+    <rect x="984" y="208" width="155" height="100" rx="18" transform="rotate(12 984 208)"/>
+    <rect x="50" y="405" width="175" height="100" rx="26"/>
+    <rect x="343" y="390" width="156" height="95" rx="20" transform="rotate(-8 343 390)"/>
+    <rect x="815" y="404" width="180" height="110" rx="24"/>
+  </g>
+  <path d="M-60 433 C130 390 180 446 326 396 S564 276 719 331 S980 474 1260 354" fill="none" stroke="#d2e4e8" stroke-width="70"/>
+  <path d="M-60 433 C130 390 180 446 326 396 S564 276 719 331 S980 474 1260 354" fill="none" stroke="#e7f2f3" stroke-width="48"/>
+  <g fill="none" stroke="#fff" stroke-linecap="round" stroke-width="21">
+    <path d="M10 248 C219 221 351 311 555 231 S947 151 1220 193"/>
+    <path d="M145 -20 C232 145 300 208 409 281 S619 432 641 590"/>
+    <path d="M529 -30 C570 126 655 177 757 250 S910 443 971 590"/>
+    <path d="M1060 -20 C939 149 845 182 762 244 S548 481 485 590"/>
+    <path d="M-15 112 C205 189 302 145 480 101 S820 122 1214 67"/>
+    <path d="M-20 520 C180 487 306 523 428 475 S867 472 1219 511"/>
+  </g>
+  <g fill="none" stroke="#e4ded4" stroke-linecap="round" stroke-width="3">
+    <path d="M10 248 C219 221 351 311 555 231 S947 151 1220 193"/>
+    <path d="M145 -20 C232 145 300 208 409 281 S619 432 641 590"/>
+    <path d="M529 -30 C570 126 655 177 757 250 S910 443 971 590"/>
+    <path d="M1060 -20 C939 149 845 182 762 244 S548 481 485 590"/>
+  </g>
+  <g fill="#7d8992" font-family="Manrope,Arial,sans-serif" font-size="18" font-weight="600" letter-spacing="2">
+    <text x="70" y="91">МОСКВА</text>
+    <text x="57" y="375" font-size="14">МОСКВА-РЕКА</text>
+    <text x="962" y="115" font-size="14">ЦЕНТР</text>
+  </g>
+  <g font-family="Manrope,Arial,sans-serif" text-anchor="middle">
+    <g transform="translate(325 265)">
+      <circle r="36" fill="#101828" stroke="#fff" stroke-width="7"/>
+      <text y="9" fill="#fff" font-size="26" font-weight="700">01</text>
+      <rect x="-65" y="45" width="130" height="33" rx="16" fill="#fff"/>
+      <text y="67" fill="#101828" font-size="16" font-weight="700">Арбат</text>
+    </g>
+    <g transform="translate(626 154)">
+      <circle r="36" fill="#101828" stroke="#fff" stroke-width="7"/>
+      <text y="9" fill="#fff" font-size="26" font-weight="700">02</text>
+      <rect x="-73" y="45" width="146" height="33" rx="16" fill="#fff"/>
+      <text y="67" fill="#101828" font-size="16" font-weight="700">Тверская</text>
+    </g>
+    <g transform="translate(822 408)">
+      <circle r="36" fill="#101828" stroke="#fff" stroke-width="7"/>
+      <text y="9" fill="#fff" font-size="26" font-weight="700">03</text>
+      <rect x="-79" y="45" width="158" height="33" rx="16" fill="#fff"/>
+      <text y="67" fill="#101828" font-size="16" font-weight="700">Пятницкая</text>
+    </g>
+  </g>
+</svg>

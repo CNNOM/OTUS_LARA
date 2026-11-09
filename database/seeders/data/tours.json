@@ -2,67 +2,343 @@
   {
     "title": "Закатный круиз по Whitsunday Beach",
     "description": "Морские панорамы, уединённые бухты и расслабленный маршрут в премиальном стиле.",
+    "details": "Путешествие начинается в Эйрли-Бич и ведёт к островам Уитсанди. Белый песок Whitehaven Beach, морские прогулки и свободное время у воды создают спокойный ритм поездки.",
+    "program": "Знакомство с побережьем Эйрли-Бич, выход к Whitehaven Beach, прогулка между островными бухтами и свободный день для отдыха у моря. Завершение маршрута в Эйрли-Бич.",
     "country": "Australia",
     "category": "Coastal Escape",
     "duration_days": 5,
     "price": "1280",
     "rating": "4.9",
     "image": "tours/hero-discover.png",
-    "is_active": true
+    "is_active": true,
+    "itinerary": [
+      {
+        "title": "Знакомство с побережьем",
+        "description": "Встреча в Эйрли-Бич и свободное время у моря."
+      },
+      {
+        "title": "Whitehaven Beach",
+        "description": "Выход к островам и прогулка по белому пляжу."
+      },
+      {
+        "title": "Островные бухты",
+        "description": "Морская прогулка и остановки у воды."
+      },
+      {
+        "title": "День в своём ритме",
+        "description": "Свободный день для отдыха и занятий."
+      },
+      {
+        "title": "Возвращение",
+        "description": "Завтрак и завершение маршрута в Эйрли-Бич."
+      }
+    ],
+    "hotels": [
+      {
+        "id": "standard",
+        "name": "Coral Bay · 3★",
+        "description": "Пример размещения для маршрута «Закатный круиз по Whitsunday Beach».",
+        "amenities": "Завтрак · Wi-Fi",
+        "extra_per_day": 0,
+        "image": "images/hotel-coral-bay.jpg"
+      },
+      {
+        "id": "comfort",
+        "name": "Island View · 4★",
+        "description": "Пример размещения для маршрута «Закатный круиз по Whitsunday Beach».",
+        "amenities": "Завтрак · Wi-Fi",
+        "extra_per_day": 35,
+        "image": "images/hotel-island-view.jpg"
+      },
+      {
+        "id": "premium",
+        "name": "Ocean Retreat · 5★",
+        "description": "Пример размещения для маршрута «Закатный круиз по Whitsunday Beach».",
+        "amenities": "Завтрак · Wi-Fi",
+        "extra_per_day": 75,
+        "image": "images/hotel-ocean-retreat.jpg"
+      }
+    ]
   },
   {
     "title": "Пикник у озера Lucerne Swiss",
     "description": "Горные панорамы, локальная кухня и спокойный ритм путешествия.",
+    "details": "Озеро Люцерн окружено альпийскими склонами и небольшими городами. Маршрут рассчитан на неспешные прогулки, виды на горы и знакомство с местной кухней.",
+    "program": "Прогулка по набережной Люцерна, поездка к озёрным смотровым площадкам, пикник у воды и день для прогулок по горным тропам. Возвращение в город после завтрака.",
     "country": "Switzerland",
     "category": "Lake Retreat",
     "duration_days": 4,
     "price": "1540",
     "rating": "4.8",
     "image": "tours/tour-alpine.png",
-    "is_active": true
+    "is_active": true,
+    "itinerary": [
+      {
+        "title": "Люцерн",
+        "description": "Встреча и прогулка по набережной."
+      },
+      {
+        "title": "Озеро",
+        "description": "Пикник у озера и время на берегу."
+      },
+      {
+        "title": "Альпийские виды",
+        "description": "Прогулка к смотровым площадкам."
+      },
+      {
+        "title": "Возвращение",
+        "description": "Свободное утро и завершение путешествия."
+      }
+    ],
+    "hotels": [
+      {
+        "id": "standard",
+        "name": "Lakeside · 3★",
+        "description": "Пример размещения для маршрута «Пикник у озера Lucerne Swiss».",
+        "amenities": "Завтрак · Wi-Fi",
+        "extra_per_day": 0,
+        "image": "images/tour-alpine.png"
+      },
+      {
+        "id": "comfort",
+        "name": "Alpine View · 4★",
+        "description": "Пример размещения для маршрута «Пикник у озера Lucerne Swiss».",
+        "amenities": "Завтрак · Wi-Fi",
+        "extra_per_day": 45,
+        "image": "images/tour-alpine.png"
+      },
+      {
+        "id": "premium",
+        "name": "Lucerne Retreat · 5★",
+        "description": "Пример размещения для маршрута «Пикник у озера Lucerne Swiss».",
+        "amenities": "Завтрак · Wi-Fi",
+        "extra_per_day": 85,
+        "image": "images/tour-alpine.png"
+      }
+    ]
   },
   {
     "title": "Путешествие к водопаду Angel Falls",
     "description": "Дикая природа, маршруты с гидом и насыщенные остановки в красивых местах.",
+    "details": "Путешествие по природным ландшафтам Венесуэлы к водопаду Анхель. Акцент на пеших прогулках с проводником, наблюдении за джунглями и отдыхе у воды.",
+    "program": "Знакомство с группой и подготовка к маршруту, переходы по тропам с гидом, поездка к смотровой точке на водопад и время для исследования окрестностей. Возвращение по тому же маршруту.",
     "country": "Venezuela",
     "category": "Adventure Trail",
     "duration_days": 7,
     "price": "1920",
     "rating": "4.7",
     "image": "tours/hero-discover.png",
-    "is_active": true
+    "is_active": true,
+    "itinerary": [
+      {
+        "title": "Подготовка",
+        "description": "Встреча с проводником и знакомство с маршрутом."
+      },
+      {
+        "title": "Природные тропы",
+        "description": "Переходы по лесным тропам с гидом."
+      },
+      {
+        "title": "Водопад Анхель",
+        "description": "Выход к обзорной точке на водопад."
+      },
+      {
+        "title": "Окрестности",
+        "description": "Свободное время у воды."
+      },
+      {
+        "title": "Возвращение",
+        "description": "Завершение маршрута и дорога обратно."
+      }
+    ],
+    "hotels": [
+      {
+        "id": "standard",
+        "name": "Jungle Camp · 3★",
+        "description": "Пример размещения для маршрута «Путешествие к водопаду Angel Falls».",
+        "amenities": "Завтрак · Wi-Fi",
+        "extra_per_day": 0,
+        "image": "images/hero-discover.png"
+      },
+      {
+        "id": "comfort",
+        "name": "River Lodge · 4★",
+        "description": "Пример размещения для маршрута «Путешествие к водопаду Angel Falls».",
+        "amenities": "Завтрак · Wi-Fi",
+        "extra_per_day": 40,
+        "image": "images/hero-discover.png"
+      },
+      {
+        "id": "premium",
+        "name": "Canaima Retreat · 5★",
+        "description": "Пример размещения для маршрута «Путешествие к водопаду Angel Falls».",
+        "amenities": "Завтрак · Wi-Fi",
+        "extra_per_day": 90,
+        "image": "images/hero-discover.png"
+      }
+    ]
   },
   {
     "title": "Скрытые тропы северной долины",
     "description": "Путешествие для тех, кто ищет тишину, чистый воздух и северную красоту.",
+    "details": "Северные долины Исландии подходят для прогулок вдали от городской суеты. В маршруте — открытые пространства, горные виды и остановки в небольших поселениях.",
+    "program": "Начало путешествия в северном регионе, прогулки по долинам и обзорным тропам, день для знакомства с местными пейзажами и завершение поездки в точке отправления.",
     "country": "Iceland",
     "category": "Highland Route",
     "duration_days": 6,
     "price": "2060",
     "rating": "5.0",
     "image": "tours/tour-alpine.png",
-    "is_active": true
+    "is_active": true,
+    "itinerary": [
+      {
+        "title": "Начало пути",
+        "description": "Знакомство с северными пейзажами."
+      },
+      {
+        "title": "Долина",
+        "description": "Пешая прогулка по открытым пространствам."
+      },
+      {
+        "title": "Смотровые точки",
+        "description": "Поездка к горным панорамам."
+      },
+      {
+        "title": "День в своём темпе",
+        "description": "Свободное время для прогулок."
+      },
+      {
+        "title": "Возвращение",
+        "description": "Завершение поездки в точке отправления."
+      }
+    ],
+    "hotels": [
+      {
+        "id": "standard",
+        "name": "Northern Stay · 3★",
+        "description": "Пример размещения для маршрута «Скрытые тропы северной долины».",
+        "amenities": "Завтрак · Wi-Fi",
+        "extra_per_day": 0,
+        "image": "images/tour-alpine.png"
+      },
+      {
+        "id": "comfort",
+        "name": "Valley Lodge · 4★",
+        "description": "Пример размещения для маршрута «Скрытые тропы северной долины».",
+        "amenities": "Завтрак · Wi-Fi",
+        "extra_per_day": 55,
+        "image": "images/tour-alpine.png"
+      },
+      {
+        "id": "premium",
+        "name": "Highland Retreat · 5★",
+        "description": "Пример размещения для маршрута «Скрытые тропы северной долины».",
+        "amenities": "Завтрак · Wi-Fi",
+        "extra_per_day": 95,
+        "image": "images/tour-alpine.png"
+      }
+    ]
   },
   {
     "title": "Лесные лоджи и термальные источники",
     "description": "Медленные утра, панорамные террасы и восстановление на природе.",
+    "details": "Отдых в лесных лоджах Норвегии с возможностью провести время у термальных источников. Поездка сочетает короткие прогулки и свободные часы на природе.",
+    "program": "Заселение в лодж и знакомство с окрестностями, прогулка по лесной тропе, отдых у источников и свободное утро перед отъездом.",
     "country": "Norway",
     "category": "Wellness Journey",
     "duration_days": 3,
     "price": "980",
     "rating": "4.8",
     "image": "tours/register-retreat.png",
-    "is_active": true
+    "is_active": true,
+    "itinerary": [
+      {
+        "title": "Лесные лоджи",
+        "description": "Заселение и прогулка по лесу."
+      },
+      {
+        "title": "Термальные источники",
+        "description": "День отдыха и коротких прогулок."
+      },
+      {
+        "title": "Возвращение",
+        "description": "Свободное утро и завершение поездки."
+      }
+    ],
+    "hotels": [
+      {
+        "id": "standard",
+        "name": "Forest Cabin · 3★",
+        "description": "Пример размещения для маршрута «Лесные лоджи и термальные источники».",
+        "amenities": "Завтрак · Wi-Fi",
+        "extra_per_day": 0,
+        "image": "images/register-retreat.png"
+      },
+      {
+        "id": "comfort",
+        "name": "Thermal Lodge · 4★",
+        "description": "Пример размещения для маршрута «Лесные лоджи и термальные источники».",
+        "amenities": "Завтрак · Wi-Fi",
+        "extra_per_day": 30,
+        "image": "images/register-retreat.png"
+      },
+      {
+        "id": "premium",
+        "name": "Norway Retreat · 5★",
+        "description": "Пример размещения для маршрута «Лесные лоджи и термальные источники».",
+        "amenities": "Завтрак · Wi-Fi",
+        "extra_per_day": 65,
+        "image": "images/register-retreat.png"
+      }
+    ]
   },
   {
     "title": "Glamping-уикенд у альпийского озера",
     "description": "Стильный отдых на природе для пар, друзей и тех, кто едет впервые.",
+    "details": "Короткая поездка к альпийскому озеру в Австрии: размещение на природе, береговые прогулки и вечер у костра без плотного расписания.",
+    "program": "Прибытие и размещение у озера, прогулка вдоль берега и вечер на природе. На следующий день — свободное утро и возвращение домой.",
     "country": "Austria",
     "category": "Cabin Stay",
     "duration_days": 2,
     "price": "860",
     "rating": "4.9",
     "image": "tours/register-retreat.png",
-    "is_active": true
+    "is_active": true,
+    "itinerary": [
+      {
+        "title": "Заселение у озера",
+        "description": "Прибытие и прогулка вдоль берега."
+      },
+      {
+        "title": "Альпийское утро",
+        "description": "Завтрак на природе и возвращение."
+      }
+    ],
+    "hotels": [
+      {
+        "id": "standard",
+        "name": "Lakeside Tent · 3★",
+        "description": "Пример размещения для маршрута «Glamping-уикенд у альпийского озера».",
+        "amenities": "Завтрак · Wi-Fi",
+        "extra_per_day": 0,
+        "image": "images/register-retreat.png"
+      },
+      {
+        "id": "comfort",
+        "name": "Alpine Cabin · 4★",
+        "description": "Пример размещения для маршрута «Glamping-уикенд у альпийского озера».",
+        "amenities": "Завтрак · Wi-Fi",
+        "extra_per_day": 25,
+        "image": "images/register-retreat.png"
+      },
+      {
+        "id": "premium",
+        "name": "Lake Glamping · 5★",
+        "description": "Пример размещения для маршрута «Glamping-уикенд у альпийского озера».",
+        "amenities": "Завтрак · Wi-Fi",
+        "extra_per_day": 60,
+        "image": "images/register-retreat.png"
+      }
+    ]
   }
 ]

@@ -28,7 +28,7 @@
                     <button class="site-header__lang-option" type="button">KZ</button>
                 </div>
             </details>
-            <a class="site-header__talk" href="/registration">Связаться</a>
+            <a class="site-header__talk" href="/contacts">Связаться</a>
             <a class="site-header__cta" href="/registration">Забронировать</a>
         </div>
     </div>

@@ -40,26 +40,7 @@
                 </div>
                 <div class="tours-catalog__grid">
                     @forelse ($tours as $tour)
-                        <article class="tour-card">
-                            <div class="tour-card__media">
-                                <img src="{{ $tour->image ? asset('storage/' . $tour->image) : asset('images/hero-discover.png') }}"
-                                    alt="{{ $tour->title }}" loading="lazy">
-                                <span class="tour-card__badge">{{ $tour->country }}</span>
-                            </div>
-                            <div class="tour-card__meta">
-                                <span>{{ $tour->category }}</span>
-                                <span>{{ $tour->duration_days }}
-                                    {{ trans_choice('день|дня|дней', $tour->duration_days, [], 'ru') }}</span>
-                            </div>
-                            <h3 class="tour-card__title">{{ $tour->title }}</h3>
-                            <p class="tour-card__text">{{ $tour->description }}</p>
-                            <div class="tour-card__footer">
-                                <span
-                                    class="tour-card__rating">{{ $tour->rating !== null ? '★ ' . $tour->rating : 'Нет оценок' }}</span>
-                                <span
-                                    class="tour-card__price">${{ number_format((float) $tour->price, 2, '.', ',') }}</span>
-                            </div>
-                        </article>
+                        @include('pages.tour-card', ['tour' => $tour])
                     @empty
                         <p>Сейчас нет опубликованных туров. Загляните позже.</p>
                     @endforelse

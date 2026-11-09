@@ -16,7 +16,13 @@ class TourSeeder extends Seeder
             if (! Storage::disk('public')->exists($tour['image'])) {
                 Storage::disk('public')->put($tour['image'], file_get_contents(public_path('images/'.basename($tour['image']))));
             }
-            Tour::firstOrCreate(['title' => $tour['title']], $tour);
+            $record = Tour::firstOrCreate(['title' => $tour['title']], $tour);
+            $record->update(array_filter([
+                'details' => $record->details === null ? $tour['details'] : null,
+                'program' => $record->program === null ? $tour['program'] : null,
+                'hotels' => $record->hotels === null ? $tour['hotels'] : null,
+                'itinerary' => $record->itinerary === null ? $tour['itinerary'] : null,
+            ], fn ($value) => $value !== null));
         }
     }
 }

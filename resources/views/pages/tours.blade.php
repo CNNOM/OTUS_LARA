@@ -36,7 +36,7 @@
                         <span>Luxury stay</span>
                         <span>Маршруты с гидом</span>
                     </div>
-                    <a href="/registration.html">Заказать индивидуальный тур</a>
+                    <a href="/registration">Заказать индивидуальный тур</a>
                 </div>
                 <div class="tours-catalog__grid">
                     @forelse ($tours as $tour)
@@ -63,9 +63,6 @@
                     @empty
                         <p>Сейчас нет опубликованных туров. Загляните позже.</p>
                     @endforelse
-                </div>
-                <div class="tours-catalog__pagination">
-                    <button class="ui-button ui-button--primary" type="button">Показать ещё</button>
                 </div>
             </div>
         </section>

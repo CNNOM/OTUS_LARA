@@ -1,6 +1,6 @@
 @extends('index')
 
-@section('title', 'Авторизация')
+@section('title', 'Регистрация')
 
 @section('main')
     <main class="layout__content">
@@ -48,7 +48,7 @@
                             placeholder="Расскажите о бюджете, темпе поездки, составе путешественников и ожиданиях">
                 </textarea>
                     </label>
-                    <button class="registration-form__submit" type="submit">Отправить заявку</button>
+                    <button class="registration-form__submit" type="button" disabled>Отправить заявку</button>
                 </form>
             </div>
         </section>

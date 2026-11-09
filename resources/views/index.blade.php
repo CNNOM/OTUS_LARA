@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title', config('app.name'))</title>
+    <title>Discover Journey | @yield('title', config('app.name'))</title>
     @include('templ.assets')
     @include('templ.meta')
 </head>
